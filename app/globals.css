@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/*
+  Arima Robotics — Design Tokens
+  Brand: #1f5fd6 | dark #143e8f | accent (CTA) #f0852b
+*/
+@theme {
+  --color-brand: #1f5fd6;
+  --color-brand-dark: #143e8f;
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #d9e6ff;
+  --color-brand-200: #bcd2ff;
+  --color-brand-300: #8eb4ff;
+  --color-brand-400: #5a8bf6;
+  --color-brand-500: #1f5fd6;
+  --color-brand-600: #1a51bb;
+  --color-brand-700: #143e8f;
+  --color-brand-800: #143672;
+  --color-brand-900: #15315f;
+
+  --color-accent: #f0852b;
+  --color-accent-50: #fff5eb;
+  --color-accent-100: #ffe6cc;
+  --color-accent-200: #ffc999;
+  --color-accent-300: #ffa860;
+  --color-accent-400: #f99238;
+  --color-accent-500: #f0852b;
+  --color-accent-600: #d76f18;
+  --color-accent-700: #b3580f;
+
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --border: #e2e8f0;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.bg-brand-gradient {
+  background-image: linear-gradient(135deg, #143e8f 0%, #1f5fd6 55%, #3b82f6 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
